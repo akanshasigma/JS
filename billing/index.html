@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Billing Information</title>
+</head>
+<body>
+
+
+    <form>
+        <fieldset>
+            <legend>Shipping Information</legend>
+
+            <label for ="shippingName">Name:</label>
+            <input type = "text" name = "shipName" id = "shippingName" required><br/>
+
+            <label for = "shippingZip">Zip code:</label>
+            <input type = "text" name = "shipZip" id = "shippingZip" pattern = "[0-9]{6}" required><br/>
+
+            <label for="shippingAddress">Address:</label>
+            <textarea rows="3" cols="30" name="address" id="shippingAddress" required></textarea><br/>
+
+            <label for="shippingState">State:</label>
+            <input type = "text" name = "state" id = "shippingState" required><br/>
+
+            <label for="shippingCity">City:</label>
+            <input type = "text" name = "city" id = "shippingCity" required><br/>
+
+            <label for="shippingEmail">Email:</label>
+            <input type="email" id="shippingEmail" name="email" required><br/>
+
+            <label for="shippingPhone">Phone number:</label>
+            <input type="tel" id="shippingPhone" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required><br/>
+
+        </fieldset>
+        <input type="checkbox" id="same" name="same" onchange = "billingFunction(this.form)"/>
+        <label for = "same">Is the Billing Information the Same?</label>
+
+        <fieldset>
+            <legend>Billing Information</legend>
+
+            <label for ="billingName">Name:</label>
+            <input type = "text" name = "billName" id = "billingName" required><br/>
+
+            <label for = "billingZip">Zip code:</label>
+            <input type = "text" name = "billZip" id = "billingZip" pattern = "[0-9]{5}" required><br/>
+
+            <label for="billingAddress">Address:</label>
+            <textarea rows="3" cols="30" name="address" id="billingAddress" required></textarea><br/>
+
+            <label for="billingState">State:</label>
+            <input type = "text" name = "state" id = "billingState" required><br/>
+
+            <label for="billingCity">City:</label>
+            <input type = "text" name = "city" id = "billingCity" required><br/>
+
+            <label for="billingEmail">Email:</label>
+            <input type="email" id="billingEmail" name="email" required><br/>
+
+            <label for="billingPhone">Phone number:</label>
+            <input type="tel" id="billingPhone" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required  ><br/>
+
+        </fieldset>
+        <input type = "submit" value = "Verify"/>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>
